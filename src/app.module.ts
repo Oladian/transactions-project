@@ -1,8 +1,12 @@
 import { Module } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
-  imports: [TypeOrmModule.forRoot({
+  imports: [ ConfigModule.forRoot({
+    isGlobal: true,
+  }),
+    TypeOrmModule.forRoot({
     type: 'mysql',
     host: process.env.DATABASE_HOST,
     port: +process.env.DATABASE_PORT,

@@ -3,6 +3,7 @@ version: '3.8'
 services:
   db:
     image: mysql:8.0
+    container_name: transaction-mysql
     environment:
       MYSQL_DATABASE: transaction_project
       MYSQL_ROOT_PASSWORD: roottransaction
