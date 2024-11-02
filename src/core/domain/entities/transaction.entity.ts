@@ -14,8 +14,8 @@ export class Transaction extends EntityBase {
         enum: TransactionStatus,
         default: TransactionStatus.PENDING,
     })
-    status: TransactionStatus
+    status: TransactionStatus;
 
-    @ManyToOne(() => User, (user) => user.id)
-    user: User;
+    @ManyToOne(() => User, (user) => user.id, { cascade: true })
+    userId: string;
 }

@@ -9,7 +9,7 @@ import { AuthPayloadDto } from "./dto/authPayload.dto";
 export class AuthService {
     constructor(private jwtService: JwtService, private userRepository: UserRepository) { }
 
-    async validateUser({ username, password }: AuthPayloadDto) {
+    async validateUser({ username, password }: AuthPayloadDto): Promise<User> {
 
         const user = await this.userRepository.findByUsername(username);
 
@@ -21,12 +21,15 @@ export class AuthService {
         throw new UnauthorizedException();
     }
 
-    async login(user: User) {
-        const payload = { username: user.username, sub: user.id, role: user.role };
+    async authenticate({ username, password }: AuthPayloadDto): Promise<{ access_token: string }> {
+
+        const user = await this.validateUser({ username, password });
+
+        const payload = { username: user.username, userId: user.id, role: user.role };
 
         return {
-            access_token: this.jwtService.sign(payload),
-        }
+            access_token: await this.jwtService.signAsync(payload, { secret: process.env.JWT_SECRET }),
+        };
     }
 
     async createUser(user: User) {

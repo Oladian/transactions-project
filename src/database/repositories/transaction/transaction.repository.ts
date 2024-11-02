@@ -1,4 +1,4 @@
-import { Injectable } from "@nestjs/common";
+import { BadRequestException, ForbiddenException, HttpException, Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
 import { Transaction } from "src/core/domain/entities/transaction.entity";
 import { TransactionStatus } from "src/core/domain/enums/transactionStatus.enum";
@@ -14,19 +14,22 @@ export class TransactionRepository implements ITransactionRepository {
     ) { }
 
     async save(transaction: Transaction): Promise<Transaction> {
+        const createTransaction = this.repository.create(transaction);
 
-        return await this.repository.save(transaction);
+        return await this.repository.save(createTransaction);
     }
     async findById(id: string): Promise<Transaction> {
-
         return await this.repository.findOne({ where: { id } });
     }
     async updateStatus(id: string, status: TransactionStatus): Promise<void> {
-
-        await this.repository.update(id, { status });
+        try {
+            await this.repository.update(id, { status });
+        } catch (e) {
+            throw new BadRequestException('Invalid argument', e);
+        }
     }
-    async findAllPending(): Promise<Transaction[]> {
 
+    async findAllPending(): Promise<Transaction[]> {
         return await this.repository.find({ where: { status: TransactionStatus.PENDING } });
     }
 }
