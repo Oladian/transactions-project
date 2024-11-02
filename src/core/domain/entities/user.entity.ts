@@ -1,4 +1,4 @@
-import { EntityBase } from "./../../../../src/core/domain/entities/entity.base";
+import { EntityBase } from "src/core/domain/entities/entity.base";
 import { Column, Entity } from "typeorm";
 import { UserRole } from "../enums/userRole.enum";
 

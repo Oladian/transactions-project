@@ -1,4 +1,4 @@
-import { EntityBase } from "./../../../../src/core/domain/entities/entity.base";
+import { EntityBase } from "src/core/domain/entities/entity.base";
 import { Column, Entity, ManyToOne } from "typeorm";
 import { TransactionStatus } from "../enums/transactionStatus.enum";
 import { User } from "./user.entity";
