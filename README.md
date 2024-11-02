@@ -10,7 +10,6 @@ This project is for a technical test in which an API for managing transactions, 
 - [Configuration](#configuration)
 - [API Usage](#api-usage)
 - [Testing](#testing)
-- [Contributions](#contributions)
 - [License](#license)
 
 ## Features
