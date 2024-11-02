@@ -1,0 +1,149 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Transactions",
+    "collectionId": "688f0671-e09c-4fed-8e99-9d9bd887dabb",
+    "dateExported": "2024-11-02T20:17:12.650Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "5789a8ec-e4b6-4dfc-9917-8804b5c6e476",
+            "colId": "688f0671-e09c-4fed-8e99-9d9bd887dabb",
+            "containerId": "",
+            "name": "Create user",
+            "url": "localhost:3000/auth/create",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-11-01T18:41:37.865Z",
+            "modified": "2024-11-02T20:16:37.601Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"user\",\n  \"password\":\"userpass\",\n  \"role\": \"user\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "88c56425-afbb-49c4-8f1c-d398467a0fa4",
+            "colId": "688f0671-e09c-4fed-8e99-9d9bd887dabb",
+            "containerId": "",
+            "name": "Login user",
+            "url": "localhost:3000/auth/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-11-01T18:43:13.426Z",
+            "modified": "2024-11-02T20:16:36.467Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"adminpass\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "5ed1a821-2765-4922-a3b7-ec1f38ff7de5",
+            "colId": "688f0671-e09c-4fed-8e99-9d9bd887dabb",
+            "containerId": "",
+            "name": "validate",
+            "url": "127.0.0.1:3000/transactions/validate/01JBPVADT6NQJMCHJ3YF3N4ZFF",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-11-02T17:29:31.401Z",
+            "modified": "2024-11-02T20:07:46.629Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJzdWIiOiIwMUpCTUtNQVoxWDJXV0gxUFhFRFY4MkhNViIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzMwNTUyNjk5LCJleHAiOjE3MzA1NTYyOTl9.ntlmVjPOm8z1ur0_YfhpaXpAbRWF0wdH9FQL-wM02ZI.eyJ1c2VybmFtZSI6InRlc3QiLCJzdWIiOiIwMUpCTUtNQVoxWDJXV0gxUFhFRFY4MkhNViIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzMwNTUyNjk5LCJleHAiOjE3MzA1NTYyOTl9.ntlmVjPOm8z1ur0_YfhpaXpAbRWF0wdH9FQL-wM02ZI.eyJ1c2VybmFtZSI6InRlc3QiLCJzdWIiOiIwMUpCTUtNQVoxWDJXV0gxUFhFRFY4MkhNViIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzMwNTUyNTExLCJleHAiOjE3MzA1NTYxMTF9.F3oBjuh3_QovxLVUlpTg5B7QHjH_o9zy48u1pKiJ4Nc.eyJ1c2VybmFtZSI6InRlc3QiLCJzdWIiOiIwMUpCTUtNQVoxWDJXV0gxUFhFRFY4MkhNViIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzMwNTUxNDk3LCJleHAiOjE3MzA1NTUwOTd9.juzEWMQfUOzKm0-24IAFFOqmSxHWWXB6eOKGvbf3x6M",
+                    "isDisabled": true
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"status\": \"rejected\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwidXNlcklkIjoiMDFKQlBWSllNMEQ1UEM0RU5DVllEMzVEWTciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzA1NzgwMDksImV4cCI6MTczMDU4MTYwOX0.-U1UNplm8h7kIzzvDa9fZyVTLQAechZQ3lbGeejWTPk"
+            }
+        },
+        {
+            "_id": "75b172bf-0273-404f-a5b2-1eb4e39fece3",
+            "colId": "688f0671-e09c-4fed-8e99-9d9bd887dabb",
+            "containerId": "",
+            "name": "find by id",
+            "url": "127.0.0.1:3000/transactions/01JBPVADT6NQJMCHJ3YF3N4ZFF",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-11-02T17:29:41.894Z",
+            "modified": "2024-11-02T17:29:41.894Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJzdWIiOiIwMUpCTUtNQVoxWDJXV0gxUFhFRFY4MkhNViIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzMwNTUyNjk5LCJleHAiOjE3MzA1NTYyOTl9.ntlmVjPOm8z1ur0_YfhpaXpAbRWF0wdH9FQL-wM02ZI.eyJ1c2VybmFtZSI6InRlc3QiLCJzdWIiOiIwMUpCTUtNQVoxWDJXV0gxUFhFRFY4MkhNViIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzMwNTUyNjk5LCJleHAiOjE3MzA1NTYyOTl9.ntlmVjPOm8z1ur0_YfhpaXpAbRWF0wdH9FQL-wM02ZI.eyJ1c2VybmFtZSI6InRlc3QiLCJzdWIiOiIwMUpCTUtNQVoxWDJXV0gxUFhFRFY4MkhNViIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzMwNTUyNTExLCJleHAiOjE3MzA1NTYxMTF9.F3oBjuh3_QovxLVUlpTg5B7QHjH_o9zy48u1pKiJ4Nc.eyJ1c2VybmFtZSI6InRlc3QiLCJzdWIiOiIwMUpCTUtNQVoxWDJXV0gxUFhFRFY4MkhNViIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzMwNTUxNDk3LCJleHAiOjE3MzA1NTUwOTd9.juzEWMQfUOzKm0-24IAFFOqmSxHWWXB6eOKGvbf3x6M",
+                    "isDisabled": true
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwidXNlcklkIjoiMDFKQlBWSllNMEQ1UEM0RU5DVllEMzVEWTciLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzA1NjUyMzAsImV4cCI6MTczMDU2ODgzMH0.loWKqJJZtLpS7-VghgAdm3WeTNNrgxMhKu0zndcZeFU"
+            }
+        },
+        {
+            "_id": "1cd99e16-2c93-47ec-b42c-b7dbe7ff3f6e",
+            "colId": "688f0671-e09c-4fed-8e99-9d9bd887dabb",
+            "containerId": "",
+            "name": "create transaction",
+            "url": "127.0.0.1:3000/transaction/request",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-11-02T17:29:47.151Z",
+            "modified": "2024-11-02T17:29:47.151Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"amount\":1000000\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RvIiwidXNlcklkIjoiMDFKQlBWQVYzNFc3QlMyODBWOTNXRFJIREUiLCJyb2xlIjoidXNlciIsImlhdCI6MTczMDU2NDk0OSwiZXhwIjoxNzMwNTY4NTQ5fQ.rDK15d_6ZvkHV9K1zqWFQCdpxkT2MzLN66JZZzCA6P0"
+            }
+        },
+        {
+            "_id": "39f0aed6-4be7-4ab3-bc2d-9864dca47161",
+            "colId": "688f0671-e09c-4fed-8e99-9d9bd887dabb",
+            "containerId": "",
+            "name": "login user",
+            "url": "localhost:3000/auth/login",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-11-02T17:29:54.332Z",
+            "modified": "2024-11-02T17:29:54.332Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"admin\",\n  \"password\":\"1234\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "dd8b5f39-b529-4607-9055-dd37f562a8a3",
+            "colId": "688f0671-e09c-4fed-8e99-9d9bd887dabb",
+            "containerId": "",
+            "name": "create admin",
+            "url": "127.0.0.1:3000/auth/create",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2024-11-02T17:29:59.536Z",
+            "modified": "2024-11-02T17:29:59.536Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"admin\",\n  \"password\":\"1234\",\n  \"role\": \"admin\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "56ahI-XJffYGWWL2-R3pjm9SmgMNAB6nTCo4UvMqcvcO-GP8ooR_swl6BFOXCfipoT_XItmeOEVVDf9CkmRGxg"
+}
