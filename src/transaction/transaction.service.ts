@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common";
-import { Transaction } from "src/core/domain/entities/transaction.entity";
-import { TransactionStatus } from "src/core/domain/enums/transactionStatus.enum";
-import { TransactionRepository } from "src/database/repositories/transaction/transaction.repository";
+import { Transaction } from "./../../src/core/domain/entities/transaction.entity";
+import { TransactionStatus } from "./../../src/core/domain/enums/transactionStatus.enum";
+import { TransactionRepository } from "./../../src/database/repositories/transaction/transaction.repository";
 
 @Injectable()
 export class TransactionService {

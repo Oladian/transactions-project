@@ -1,8 +1,8 @@
-import { BadRequestException, ForbiddenException, HttpException, Injectable } from "@nestjs/common";
+import { BadRequestException, Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
-import { Transaction } from "src/core/domain/entities/transaction.entity";
-import { TransactionStatus } from "src/core/domain/enums/transactionStatus.enum";
-import { ITransactionRepository } from "src/core/domain/interfaces/transaction.repository.interface";
+import { Transaction } from "./../../../../src/core/domain/entities/transaction.entity";
+import { TransactionStatus } from "./../../../../src/core/domain/enums/transactionStatus.enum";
+import { ITransactionRepository } from "./../../../../src/core/domain/interfaces/transaction.repository.interface";
 import { Repository } from "typeorm";
 
 
